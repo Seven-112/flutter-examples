@@ -12,16 +12,15 @@ class Tweet extends StatelessWidget {
   final String favorites;
 
   const Tweet(
-      {Key key,
-      @required this.avatar,
-      @required this.username,
-      @required this.name,
-      @required this.timeAgo,
-      @required this.text,
-      @required this.comments,
-      @required this.retweets,
-      @required this.favorites})
-      : super(key: key);
+      {super.key,
+      required this.avatar,
+      required this.username,
+      required this.name,
+      required this.timeAgo,
+      required this.text,
+      required this.comments,
+      required this.retweets,
+      required this.favorites});
 
   @override
   Widget build(BuildContext context) {
@@ -65,8 +64,8 @@ class Tweet extends StatelessWidget {
         Container(
           margin: const EdgeInsets.only(right: 5.0),
           child: Text(
-            this.username,
-            style: TextStyle(
+            username,
+            style: const TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,
             ),
@@ -74,13 +73,13 @@ class Tweet extends StatelessWidget {
         ),
         Text(
           '@$name · $timeAgo',
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.grey,
           ),
         ),
-        Spacer(),
+        const Spacer(),
         IconButton(
-          icon: Icon(
+          icon: const Icon(
             FontAwesomeIcons.angleDown,
             size: 14.0,
             color: Colors.grey,
@@ -104,9 +103,9 @@ class Tweet extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          tweetIconButton(FontAwesomeIcons.comment, this.comments),
-          tweetIconButton(FontAwesomeIcons.retweet, this.retweets),
-          tweetIconButton(FontAwesomeIcons.heart, this.favorites),
+          tweetIconButton(FontAwesomeIcons.comment, comments),
+          tweetIconButton(FontAwesomeIcons.retweet, retweets),
+          tweetIconButton(FontAwesomeIcons.heart, favorites),
           tweetIconButton(FontAwesomeIcons.share, ''),
         ],
       ),
@@ -125,7 +124,7 @@ class Tweet extends StatelessWidget {
           margin: const EdgeInsets.all(6.0),
           child: Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.black45,
               fontSize: 14.0,
             ),

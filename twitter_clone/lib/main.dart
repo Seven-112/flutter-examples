@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:twitter_clone/tweets.dart';
 
-void main() => runApp(TwitterCloneApp());
+void main() {
+  runApp(const MyApp());
+}
 
-class TwitterCloneApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,22 +16,22 @@ class TwitterCloneApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        primaryColorBrightness: Brightness.light,
+        brightness: Brightness.light,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      home: const MyHomePage(),
     );
   }
 }
 
-class HomeScreen extends StatefulWidget {
-  HomeScreen({Key key}) : super(key: key);
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,12 +39,13 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 1,
         backgroundColor: Colors.white,
         leading: Container(
-          margin: const EdgeInsets.all(10.0),
-          child: CircleAvatar(
-            backgroundImage: AssetImage('nano.jpeg'),
+          margin: const EdgeInsets.all(10),
+          child: const CircleAvatar(
+            backgroundImage: AssetImage('images/avatar.png'),
           ),
         ),
-        title: Text(
+        centerTitle: true,
+        title: const Text(
           'Home',
           style: TextStyle(
             color: Colors.black,
@@ -49,31 +54,31 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       body: listOfTweets(),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(FontAwesomeIcons.pen),
-        onPressed: () {},
-      ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
+          children: <Widget>[
             buildBottomIconButton(Icons.home, Colors.blue),
             buildBottomIconButton(Icons.search, Colors.black45),
             buildBottomIconButton(Icons.notifications, Colors.black45),
-            buildBottomIconButton(Icons.mail_outline, Colors.black45),
+            buildBottomIconButton(Icons.mail_outline, Colors.black45)
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(FontAwesomeIcons.pen),
       ),
     );
   }
 
   Widget buildBottomIconButton(IconData icon, Color color) {
     return IconButton(
+      onPressed: () {},
       icon: Icon(
         icon,
         color: color,
       ),
-      onPressed: () {},
     );
   }
 
@@ -84,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
         itemBuilder: (BuildContext context, int index) {
           return tweets[index];
         },
-        separatorBuilder: (BuildContext context, int index) => Divider(
+        separatorBuilder: (BuildContext context, int index) => const Divider(
           height: 0,
         ),
         itemCount: tweets.length,

@@ -6,23 +6,29 @@ import 'package:shopping_wine/product.dart';
 class ProductView extends StatelessWidget {
   final Product product;
 
-  const ProductView({Key? key, required this.product}) : super(key: key);
+  const ProductView({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 10,
       shadowColor: Colors.black54,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(kRadius)),
+      shape:
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(kRadius)),
       child: Container(
-        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(kRadius)),
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(kRadius)),
         width: 445,
         height: 130,
         child: Row(
           children: [
             Expanded(
               flex: 1,
-              child: SizedBox(width: 200, height: 200, child: image()),
+              child: SizedBox(
+                width: 200,
+                height: 200,
+                child: image(),
+              ),
             ),
             Expanded(
               flex: 2,
@@ -73,10 +79,15 @@ class ProductView extends StatelessWidget {
   }
 
   Text price() => Text('\$ ${product.price}',
-      style: GoogleFonts.ptSansCaption(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.pink));
+      style: GoogleFonts.ptSansCaption(
+          fontSize: 20, fontWeight: FontWeight.bold, color: Colors.pink));
 
-  Text description() => Text('Country: ${product.country} • Bottle size: 750 ml',
-      style: GoogleFonts.ptSansCaption(fontSize: 12, fontWeight: FontWeight.w500, color: Colors.grey));
+  Text description() =>
+      Text('Country: ${product.country} • Bottle size: 750 ml',
+          style: GoogleFonts.ptSansCaption(
+              fontSize: 12, fontWeight: FontWeight.w500, color: Colors.grey));
 
-  Text name() => Text(product.name, style: GoogleFonts.ptSansCaption(fontWeight: FontWeight.bold, fontSize: 18));
+  Text name() => Text(product.name,
+      style:
+          GoogleFonts.ptSansCaption(fontWeight: FontWeight.bold, fontSize: 18));
 }

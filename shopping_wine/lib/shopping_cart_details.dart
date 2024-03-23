@@ -7,11 +7,11 @@ class ShoppingCartDetails extends StatelessWidget {
   final bool isTotal;
 
   const ShoppingCartDetails({
-    Key? key,
+    super.key,
     required this.field,
     required this.price,
     this.isTotal = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

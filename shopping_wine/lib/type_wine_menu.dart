@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:shopping_wine/type_wine_item.dart';
 
 class TypeWineMenu extends StatelessWidget {
-  const TypeWineMenu({Key? key}) : super(key: key);
+  const TypeWineMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
+    return const Wrap(
       runAlignment: WrapAlignment.start,
       runSpacing: 20,
       spacing: 20,
-      children: const [
+      children: [
         TypeWineItem(typeName: 'Red', isSelected: true),
         TypeWineItem(typeName: 'White', isSelected: false),
         TypeWineItem(typeName: 'Rose', isSelected: false),

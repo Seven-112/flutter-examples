@@ -15,8 +15,9 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,74 +33,85 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0x00f9f9f9),
-      body: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            flex: 5,
-            child: ListView(
-              key: const Key('list_view_products'),
-              controller: ScrollController(),
-              shrinkWrap: true,
-              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 50),
-              children: [
-                Text('Wine & Spirits Team',
-                    style: GoogleFonts.ptSansCaption(fontWeight: FontWeight.bold, fontSize: 28)),
-                const SizedBox(height: 5),
-                Text('Location: New York', style: GoogleFonts.ptSansCaption(fontSize: 12, color: Colors.grey)),
-                const SizedBox(height: 20),
-                const SearchBar(),
-                const SizedBox(height: 20),
-                const TypeWineMenu(),
-                const SizedBox(height: 40),
-                buildProducts(),
-              ],
-            ),
+      backgroundColor: Colors.white,
+      body: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Expanded(
+          flex: 5,
+          child: ListView(
+            key: const Key('list_view_products'),
+            controller: ScrollController(),
+            shrinkWrap: true,
+            padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 50),
+            children: [
+              Text(
+                'Wine & Spirits Team',
+                style: GoogleFonts.ptSansCaption(
+                    fontWeight: FontWeight.bold, fontSize: 28),
+              ),
+              const SizedBox(height: 5),
+              Text(
+                'Location: New York',
+                style:
+                    GoogleFonts.ptSansCaption(fontSize: 12, color: Colors.grey),
+              ),
+              const SizedBox(height: 20),
+              const CSearchBar(),
+              const SizedBox(height: 20),
+              const TypeWineMenu(),
+              const SizedBox(height: 40),
+              buildProducts(),
+            ],
           ),
-          VerticalDivider(thickness: 1, color: Colors.grey[200], width: 1),
-          Expanded(
-            flex: 2,
-            child: ListView(
-              key: const Key('list_view_shopping_cart_products'),
-              controller: ScrollController(),
-              shrinkWrap: true,
-              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 50),
-              children: [
-                Text('Cart', style: GoogleFonts.ptSansCaption(fontWeight: FontWeight.bold, fontSize: 28)),
-                const SizedBox(height: 40),
-                buildShoppingCartProducts(),
-                const SizedBox(height: 40),
-                const ShoppingCartDetails(field: 'Subtotal', price: 96.00),
-                const SizedBox(height: 20),
-                const ShoppingCartDetails(field: 'Tax', price: 2.00),
-                const SizedBox(height: 20),
-                const ShoppingCartDetails(field: 'Discount', price: 0.00),
-                const SizedBox(height: 20),
-                Divider(thickness: 1, color: Colors.grey[200]),
-                const SizedBox(height: 20),
-                const ShoppingCartDetails(field: 'Total', price: 98.00, isTotal: true),
-              ],
-            ),
+        ),
+        VerticalDivider(thickness: 1, color: Colors.grey[200], width: 1),
+        Expanded(
+          flex: 2,
+          child: ListView(
+            key: const Key('list_view_shopping_cart_products'),
+            controller: ScrollController(),
+            shrinkWrap: true,
+            padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 50),
+            children: [
+              Text(
+                'Cart',
+                style: GoogleFonts.ptSansCaption(
+                    fontWeight: FontWeight.bold, fontSize: 28),
+              ),
+              const SizedBox(height: 40),
+              buildShoppingCartProducts(),
+              const SizedBox(height: 40),
+              const ShoppingCartDetails(field: 'Subtotal', price: 96.00),
+              const SizedBox(height: 20),
+              const ShoppingCartDetails(field: 'Tax', price: 2.00),
+              const SizedBox(height: 20),
+              const ShoppingCartDetails(field: 'Discount', price: 0.00),
+              const SizedBox(height: 20),
+              Divider(thickness: 1, color: Colors.grey[200]),
+              const SizedBox(height: 20),
+              const ShoppingCartDetails(
+                  field: 'Total', price: 98.00, isTotal: true),
+            ],
           ),
-        ],
-      ),
+        ),
+      ]),
     );
   }
 
   Widget buildProducts() {
     return Wrap(
       runAlignment: WrapAlignment.center,
+      alignment: WrapAlignment.center,
       runSpacing: 20,
       spacing: 20,
-      children: products.map((product) => ProductView(product: product)).toList(),
+      children:
+          products.map((product) => ProductView(product: product)).toList(),
     );
   }
 
@@ -108,7 +120,9 @@ class MyHomePage extends StatelessWidget {
       runAlignment: WrapAlignment.center,
       runSpacing: 20,
       spacing: 20,
-      children: shoppingCartProducts.map((product) => ShoppingCartProductView(product: product)).toList(),
+      children: shoppingCartProducts
+          .map((product) => ShoppingCartProductView(product: product))
+          .toList(),
     );
   }
 }

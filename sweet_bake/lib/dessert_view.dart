@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 
 class DessertView extends StatelessWidget {
   final dessert;
-
-  const DessertView(this.dessert);
+  const DessertView(this.dessert, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
       child: Material(
         elevation: 5,
-        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+        borderRadius: const BorderRadius.all(Radius.circular(20)),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(20.0),
+          borderRadius: const BorderRadius.all(Radius.circular(20)),
           child: Stack(
             alignment: AlignmentDirectional.bottomCenter,
             children: [
@@ -22,11 +21,11 @@ class DessertView extends StatelessWidget {
                 height: 60,
                 width: double.infinity,
                 color: Colors.white.withOpacity(0.8),
-                alignment: AlignmentDirectional.center,
+                alignment: Alignment.center,
                 child: Text(
                   dessert.title,
-                  style: TextStyle(
-                    fontSize: 20.0,
+                  style: const TextStyle(
+                    fontSize: 20,
                     color: Colors.black,
                     fontWeight: FontWeight.w700,
                   ),

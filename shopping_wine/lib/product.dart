@@ -7,5 +7,10 @@ class Product {
   final String image;
   final Color color;
 
-  Product({required this.name, required this.country, required this.price, required this.image, required this.color});
+  Product(
+      {required this.name,
+      required this.country,
+      required this.price,
+      required this.image,
+      required this.color});
 }

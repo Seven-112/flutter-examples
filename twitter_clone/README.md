@@ -1,7 +1,16 @@
-# Twitter UI clone
+# twitter_clone
 
-- Part 1: Top and bottom navigation bar [Post](https://nanocastellano.medium.com/twitter-ui-clone-using-flutter-part-1-58602b516297)
-- Part 2 - Design first Tweet [Post](https://nanocastellano.medium.com/twitter-ui-clone-using-flutter-part-2-5ab0f6ef2eeb)
-- Part 3 - Tweets list and Floating Action Button [Post](https://nanocastellano.medium.com/twitter-ui-clone-using-flutter-part-3-acd367ffec2a)
+A new Flutter project.
 
-![Twitter clone](images/twitter_clone.jpg)
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

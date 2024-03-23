@@ -7,10 +7,10 @@ class TypeWineItem extends StatelessWidget {
   final bool isSelected;
 
   const TypeWineItem({
-    Key? key,
+    super.key,
     required this.typeName,
     this.isSelected = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +23,14 @@ class TypeWineItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(100),
           color: isSelected ? kRedColor : Colors.white,
         ),
-        child: Text(typeName,
-            style: GoogleFonts.ptSansCaption(fontSize: 12, color: isSelected ? Colors.white : Colors.grey)),
         alignment: Alignment.center,
         width: 100,
         height: 35,
+        child: Text(
+          typeName,
+          style: GoogleFonts.ptSansCaption(
+              fontSize: 12, color: isSelected ? Colors.white : Colors.grey),
+        ),
       ),
     );
   }

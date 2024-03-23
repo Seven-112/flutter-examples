@@ -14,28 +14,32 @@ var products = [
     name: 'Casa Castillo Monastrell',
     country: 'Spain',
     price: 30,
-    image: 'https://www.saq.com/media/catalog/product/1/3/13675630-1_1578540322.png',
+    image:
+        'https://www.saq.com/media/catalog/product/1/3/13675630-1_1578540322.png',
     color: kBeigeColor,
   ),
   Product(
     name: 'Littlebury road',
     country: 'USA',
     price: 16,
-    image: 'https://images.vivino.com/thumbs/sbjW8xuyRCSFNG_QU-ir6w_pb_600x600.png',
+    image:
+        'https://images.vivino.com/thumbs/sbjW8xuyRCSFNG_QU-ir6w_pb_600x600.png',
     color: kRedColor,
   ),
   Product(
     name: 'Neleman Monastrell',
     country: 'Italy',
     price: 16,
-    image: 'https://www.neleman.wine/media/image/8a/43/74/TempranilloMonastrell-packshotYvQm0TGt1RslV.png',
+    image:
+        'https://www.neleman.wine/media/image/8a/43/74/TempranilloMonastrell-packshotYvQm0TGt1RslV.png',
     color: kBeigeColor,
   ),
   Product(
     name: 'Marqués de Tomares',
     country: 'Spain',
     price: 18,
-    image: 'https://images.vivino.com/thumbs/yONFeaNASBmKzUpX74Cwpg_pb_600x600.png',
+    image:
+        'https://images.vivino.com/thumbs/yONFeaNASBmKzUpX74Cwpg_pb_600x600.png',
     color: kBlueColor,
   ),
   Product(
@@ -58,28 +62,32 @@ var products = [
     name: 'Casa Castillo Monastrell',
     country: 'Spain',
     price: 30,
-    image: 'https://www.saq.com/media/catalog/product/1/3/13675630-1_1578540322.png',
+    image:
+        'https://www.saq.com/media/catalog/product/1/3/13675630-1_1578540322.png',
     color: kBeigeColor,
   ),
   Product(
     name: 'Littlebury road',
     country: 'USA',
     price: 16,
-    image: 'https://images.vivino.com/thumbs/sbjW8xuyRCSFNG_QU-ir6w_pb_600x600.png',
+    image:
+        'https://images.vivino.com/thumbs/sbjW8xuyRCSFNG_QU-ir6w_pb_600x600.png',
     color: kRedColor,
   ),
   Product(
     name: 'Neleman Monastrell',
     country: 'Italy',
     price: 16,
-    image: 'https://www.neleman.wine/media/image/8a/43/74/TempranilloMonastrell-packshotYvQm0TGt1RslV.png',
+    image:
+        'https://www.neleman.wine/media/image/8a/43/74/TempranilloMonastrell-packshotYvQm0TGt1RslV.png',
     color: kBeigeColor,
   ),
   Product(
     name: 'Marqués de Tomares',
     country: 'Spain',
     price: 18,
-    image: 'https://images.vivino.com/thumbs/yONFeaNASBmKzUpX74Cwpg_pb_600x600.png',
+    image:
+        'https://images.vivino.com/thumbs/yONFeaNASBmKzUpX74Cwpg_pb_600x600.png',
     color: kBlueColor,
   ),
   Product(
@@ -102,28 +110,32 @@ var products = [
     name: 'Casa Castillo Monastrell',
     country: 'Spain',
     price: 30,
-    image: 'https://www.saq.com/media/catalog/product/1/3/13675630-1_1578540322.png',
+    image:
+        'https://www.saq.com/media/catalog/product/1/3/13675630-1_1578540322.png',
     color: kBeigeColor,
   ),
   Product(
     name: 'Littlebury road',
     country: 'USA',
     price: 16,
-    image: 'https://images.vivino.com/thumbs/sbjW8xuyRCSFNG_QU-ir6w_pb_600x600.png',
+    image:
+        'https://images.vivino.com/thumbs/sbjW8xuyRCSFNG_QU-ir6w_pb_600x600.png',
     color: kRedColor,
   ),
   Product(
     name: 'Neleman Monastrell',
     country: 'Italy',
     price: 16,
-    image: 'https://www.neleman.wine/media/image/8a/43/74/TempranilloMonastrell-packshotYvQm0TGt1RslV.png',
+    image:
+        'https://www.neleman.wine/media/image/8a/43/74/TempranilloMonastrell-packshotYvQm0TGt1RslV.png',
     color: kBeigeColor,
   ),
   Product(
     name: 'Marqués de Tomares',
     country: 'Spain',
     price: 18,
-    image: 'https://images.vivino.com/thumbs/yONFeaNASBmKzUpX74Cwpg_pb_600x600.png',
+    image:
+        'https://images.vivino.com/thumbs/yONFeaNASBmKzUpX74Cwpg_pb_600x600.png',
     color: kBlueColor,
   ),
   Product(
@@ -146,28 +158,32 @@ var products = [
     name: 'Casa Castillo Monastrell',
     country: 'Spain',
     price: 30,
-    image: 'https://www.saq.com/media/catalog/product/1/3/13675630-1_1578540322.png',
+    image:
+        'https://www.saq.com/media/catalog/product/1/3/13675630-1_1578540322.png',
     color: kBeigeColor,
   ),
   Product(
     name: 'Littlebury road',
     country: 'USA',
     price: 16,
-    image: 'https://images.vivino.com/thumbs/sbjW8xuyRCSFNG_QU-ir6w_pb_600x600.png',
+    image:
+        'https://images.vivino.com/thumbs/sbjW8xuyRCSFNG_QU-ir6w_pb_600x600.png',
     color: kRedColor,
   ),
   Product(
     name: 'Neleman Monastrell',
     country: 'Italy',
     price: 16,
-    image: 'https://www.neleman.wine/media/image/8a/43/74/TempranilloMonastrell-packshotYvQm0TGt1RslV.png',
+    image:
+        'https://www.neleman.wine/media/image/8a/43/74/TempranilloMonastrell-packshotYvQm0TGt1RslV.png',
     color: kBeigeColor,
   ),
   Product(
     name: 'Marqués de Tomares',
     country: 'Spain',
     price: 18,
-    image: 'https://images.vivino.com/thumbs/yONFeaNASBmKzUpX74Cwpg_pb_600x600.png',
+    image:
+        'https://images.vivino.com/thumbs/yONFeaNASBmKzUpX74Cwpg_pb_600x600.png',
     color: kBlueColor,
   ),
   Product(

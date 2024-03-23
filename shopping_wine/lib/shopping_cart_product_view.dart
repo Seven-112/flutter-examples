@@ -6,10 +6,12 @@ import 'package:shopping_wine/product.dart';
 class ShoppingCartProductView extends StatefulWidget {
   final Product product;
 
-  const ShoppingCartProductView({Key? key, required this.product}) : super(key: key);
+  const ShoppingCartProductView({Key? key, required this.product})
+      : super(key: key);
 
   @override
-  State<ShoppingCartProductView> createState() => _ShoppingCartProductViewState();
+  State<ShoppingCartProductView> createState() =>
+      _ShoppingCartProductViewState();
 }
 
 class _ShoppingCartProductViewState extends State<ShoppingCartProductView> {
@@ -59,11 +61,19 @@ class _ShoppingCartProductViewState extends State<ShoppingCartProductView> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text(widget.product.name, style: GoogleFonts.ptSansCaption(fontWeight: FontWeight.bold, fontSize: 16)),
+                Text(widget.product.name,
+                    style: GoogleFonts.ptSansCaption(
+                        fontWeight: FontWeight.bold, fontSize: 16)),
                 Text('Bottle size: 750 ml',
-                    style: GoogleFonts.ptSansCaption(fontSize: 10, fontWeight: FontWeight.w500, color: Colors.grey)),
+                    style: GoogleFonts.ptSansCaption(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.grey)),
                 Text('\$ ${widget.product.price}',
-                    style: GoogleFonts.ptSansCaption(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.pink)),
+                    style: GoogleFonts.ptSansCaption(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.pink)),
               ],
             ),
           ),
